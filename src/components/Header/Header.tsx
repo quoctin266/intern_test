@@ -15,6 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -53,7 +54,7 @@ function Header() {
             }}
             onClick={() => router.push("/")}
           >
-            <img src="image/logo.png" width={100} />
+            <Image src="/image/logo.png" width={100} height={35} alt="logo" />
           </Box>
           <Box
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, gap: 3 }}
@@ -118,7 +119,7 @@ function Header() {
             }}
             onClick={() => router.push("/")}
           >
-            <img src="image/logo.png" width={100} />
+            <Image src="/image/logo.png" width={100} height={35} alt="logo" />
           </Box>
           {/* Mobile screen */}
 

@@ -21,6 +21,7 @@ import {
   addToList,
   removeFromList,
 } from "@/lib/features/products/productSlice";
+import Image from "next/image";
 
 dayjs.extend(customParseFormat);
 
@@ -36,7 +37,9 @@ function ProductCard(props: IProductCardProps) {
   return (
     <Card className={styles.container}>
       <Box position={"relative"}>
-        <CardMedia sx={{ height: 280 }} image={product.image} />
+        <Box sx={{ width: "100%", height: 280 }}>
+          <Image src={`/${product.image}`} fill={true} alt={product.title} />
+        </Box>
 
         {product.discount && (
           <div className={styles.discount}>-{product.discount}%</div>
@@ -82,7 +85,12 @@ function ProductCard(props: IProductCardProps) {
       <CardContent>
         {product.flashSale && (
           <div className={styles.flashsale}>
-            <img src="image/flashsale.png" width={70} />
+            <Image
+              src="/image/flashsale.png"
+              width={70}
+              height={15}
+              alt="logo"
+            />
             <li>{dayjs(product.flashSale, dateFormat).format("HH:mm")}</li>
             <li>{dayjs(product.flashSale, dateFormat).format("DD/MM")}</li>
           </div>
