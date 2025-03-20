@@ -1,0 +1,87 @@
+.container {
+    width        : 100%;
+    border-radius: 8px;
+    cursor       : pointer;
+
+    .title {
+        overflow          : hidden;
+        display           : -webkit-box;
+        -webkit-line-clamp: 2;
+        /* number of lines to show */
+        line-clamp        : 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .discount {
+        position                  : absolute;
+        top                       : 0;
+        border-top-left-radius    : 8px;
+        border-bottom-right-radius: 6px;
+        padding                   : 4px 8px;
+        font-size                 : small;
+        color                     : white;
+        background-color          : #F04438;
+    }
+
+    .wishlistBtn {
+        position        : absolute;
+        top             : 10px;
+        right           : 10px;
+        background-color: white;
+        opacity         : 0.9;
+    }
+
+    .tags {
+        position: absolute;
+        bottom  : 0;
+        display : flex;
+
+        .common {
+            display    : flex;
+            align-items: end;
+            gap        : 5px;
+            padding    : 5px 10px;
+            font-size  : small;
+        }
+
+        .shipping {
+            color           : white;
+            background-color: #12B76A;
+        }
+
+        .gift {
+            color           : #CC7600;
+            background-color: #FFE2B8;
+        }
+    }
+
+    .flashsale {
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        background-color: #FFE7ED;
+        border-radius   : 5px;
+        margin-bottom   : 1rem;
+
+        li {
+            color      : #E62F59;
+            margin-left: 0.4rem;
+            font-size  : 0.8rem;
+
+            &::before {
+                content    : "";
+                margin-left: -0.5rem;
+            }
+
+        }
+    }
+
+    .price {
+        color        : #F79009;
+        font-weight  : 600;
+        font-size    : 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+
+}

@@ -1,0 +1,11 @@
+.container {
+    .header {
+        display    : flex;
+        align-items: center;
+        gap        : 8px;
+
+        .btn {
+            background-color: #eeeeee;
+        }
+    }
+}
